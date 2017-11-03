@@ -1,0 +1,27 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th class="left">Task</th>
+      <th class="left">Description</th>
+      <th class="center">Finished</th>
+      <th class="center">Data/Time</th>
+      <th class="center">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr [style.text-decoration]="task.finised ? 'line-through' : 'none' " *ngFor="let task of List; let number = index">
+      <td>{{number+1}}</td>
+      <td class="left">{{task.title}}</td>
+      <td class="left">{{task.desc}}</td>
+      <td class="center">
+        <input (click)="finished(task.id)" type="checkbox">
+      </td>
+      <td class="center">{{task.data}}</td>
+      <td class="center">
+        <button (click)="remove(task.id)" [disabled]="task.finised" class="bth btn -secondary btn-block pointer">Remove</button>
+      </td>
+    </tr>
+
+  </tbody>
+</table>
