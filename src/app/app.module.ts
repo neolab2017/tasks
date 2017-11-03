@@ -1,4 +1,4 @@
-import { TasksComponent } from './tasks/tasks.component';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
@@ -7,7 +7,9 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
-import { TableTasksComponent } from './models/table-tasks/table-tasks.component';
+import { TableTasksComponent } from './table-tasks/table-tasks.component';
+import { TasksComponent } from './task/tasks.component';
+
 
 
 @NgModule({
